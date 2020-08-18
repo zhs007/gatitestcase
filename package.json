@@ -1,0 +1,27 @@
+{
+  "name": "gatitestcase",
+  "version": "1.0.0",
+  "description": "test case for GATI",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhs007/gatitestcase.git"
+  },
+  "keywords": [
+    "GATI"
+  ],
+  "author": "zerrozhao@gmail.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/zhs007/gatitestcase/issues"
+  },
+  "homepage": "https://github.com/zhs007/gatitestcase#readme",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^26.4.0"
+  }
+}
