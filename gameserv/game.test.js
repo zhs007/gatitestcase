@@ -1,12 +1,12 @@
-const {validate, play, config, initialize, version, checksum, evaluate} = require('./game');
+const {play, config, initialize, version, checksum, evaluate} = require('./game');
 
 const basicurl = 'http://127.0.0.1:2004/v2/games/936207324/';
 
-test('validate', async () => {
-  const ret = await validate(basicurl);
-  console.log(ret);
-  //   expect(lst).toEqual(undefined);
-});
+// test('validate', async () => {
+//   const ret = await validate(basicurl);
+//   console.log(ret);
+//   //   expect(lst).toEqual(undefined);
+// });
 
 test('play', async () => {
   const ret = await play(basicurl);

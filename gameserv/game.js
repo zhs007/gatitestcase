@@ -4,10 +4,21 @@ const {awaitWrap} = require('../utils');
 /**
  * validate - validate
  * @param {string} baseurl - basic url
+ * @param {object} playerState -
+ * @param {object} stakeValue -
+ * @param {object} clientParams -
+ * @param {string} command -
  * @return {Array | undefined} lst - validationErrors | undefined
  */
-async function validate(baseurl) {
-  const [err, ret] = await awaitWrap(requestPost(baseurl + 'validate', {}, {}));
+async function validate(baseurl, playerState, stakeValue, clientParams, command) {
+  const [err, ret] = await awaitWrap(requestPost(baseurl + 'validate', {}, {
+    validationInput: {
+      playerState: playerState,
+      stakeValue: stakeValue,
+      clientParams: clientParams,
+      command: command,
+    },
+  }));
   if (err) {
     return undefined;
   }

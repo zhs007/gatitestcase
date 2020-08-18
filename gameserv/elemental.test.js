@@ -1,4 +1,4 @@
-const {config, initialize} = require('./game');
+const {validate, config, initialize} = require('./game');
 const {isValidLineData} = require('./utils');
 const {parseJSON} = require('../utils');
 
@@ -28,4 +28,9 @@ test('initialize', async () => {
   expect(pspv.totalwins).toEqual(0);
   expect(pspv.totalfgtimes).toEqual(0);
   expect(pspv.totalfgwin).toEqual(0);
+});
+
+test('validate', async () => {
+  const ret = await validate(basicurl, {}, {}, {}, 'SPIN');
+  console.log(ret);
 });
